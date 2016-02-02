@@ -1,12 +1,12 @@
 {
   "name": "angular-schema-instantiator",
   "main": ["src/instantiator.js", "src/angular-instantiator.js"],
-  "version": "0.3.0",
-  "homepage": "https://github.com/tomarad/JSON-Schema-Instantiator",
+  "version": "0.3.0-jmanoto",
+  "homepage": "https://github.com/jmanoto/JSON-Schema-Instantiator",
   "authors": [
-    "Tom Arad <tom@arad.rocks>"
+    "Jeremy Manoto <jeremy.manoto@invoice2go.com>"
   ],
-  "description": "A simple instantiator for json schemas using AngularJS.",
+  "description": "A simple instantiator for json schemas using AngularJS with support for anyOf.",
   "moduleType": [
     "node"
   ],

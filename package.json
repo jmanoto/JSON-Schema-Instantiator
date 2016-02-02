@@ -1,6 +1,6 @@
 {
-  "name": "json-schema-instantiator",
-  "version": "0.3.0",
+  "name": "json-schema-instantiator-jmanoto",
+  "version": "0.3.0-jmanoto",
   "description": "A simple instantiator for json schemas.",
   "main": "index.js",
   "scripts": {
@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tomarad/JSON-Schema-Instantiator"
+    "url": "https://github.com/jmanoto/JSON-Schema-Instantiator"
   },
   "devDependencies": {
     "chai": "^3.4.0",
