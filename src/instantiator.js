@@ -7,7 +7,8 @@ var typesInstantiator = {
   'integer': 0,
   'null': null,
   'boolean': false, // Always stay positive?
-  'object': { }
+  'object': { },
+  'undefined': undefined
 };
 
 /**
@@ -27,10 +28,10 @@ function isPrimitive(obj) {
  * @returns {*}
  */
 function instantiatePrimitive(val) {
-  var type = val.type;
+  var type = val.type || null;
 
   // Support for default values in the JSON Schema.
-  if (val.default) {
+  if (val.hasOwnProperty('default')) {
     return val.default;
   }
 
@@ -72,6 +73,9 @@ function instantiate(schema) {
       for (i = 0; i < obj.allOf.length; i++) {
         visit(obj.allOf[i], name, data);
       }
+    } else if (obj.anyOf) {
+      data[name] = instantiatePrimitive(obj);
+
     } else if (type === 'array') {
       data[name] = [];
       var len = 1;
