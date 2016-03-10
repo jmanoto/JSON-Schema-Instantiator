@@ -174,5 +174,28 @@ describe('AnyOf', function() {
       title: ''
     };
     expect(result).to.deep.equal(expected);
+  });
+
+
+  it('should instantiate schema with anyOf using default value of null', function() {
+    schema = {
+      'type': 'object',
+      'properties': {
+        'title': {
+          'anyOf': [
+            { 'type': 'string'},
+            { 'type': 'null'}
+          ],
+          'default': null
+        }
+      }
+    };
+
+    result = instantiate(schema);
+    expected = {
+      title: null
+    };
+    expect(result).to.deep.equal(expected);
+
   })
 })
